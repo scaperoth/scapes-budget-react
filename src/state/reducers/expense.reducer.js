@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: { ...action.payload },
+        error: { ...action.payload.response },
       };
     case `${DELETE_EXPENSE}_PENDING`:
       return {
@@ -42,7 +42,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: { ...action.payload },
+        error: { ...action.payload.response },
       };
     case `${UPDATE_EXPENSE}_PENDING`:
       return {
@@ -60,7 +60,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: { ...action.payload },
+        error: { ...action.payload.response },
       };
     default:
       return state;

@@ -27,7 +27,7 @@ export default (state = initialState, action) => {
     case `${ADD_INCOME}_REJECTED`:
       return {
         ...state,
-        error: { ...action.payload },
+        error: { ...action.payload.response },
       };
     case `${DELETE_INCOME}_PENDING`:
       return {
@@ -45,7 +45,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: { ...action.payload },
+        error: { ...action.payload.response },
       };
     case `${UPDATE_INCOME}_PENDING`:
       return {
@@ -63,7 +63,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        error: { ...action.payload },
+        error: { ...action.payload.response },
       };
     default:
       return state;
